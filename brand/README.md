@@ -58,8 +58,8 @@ var brand = $('body').brand({
         console.log("complete");
       });
   },
-  systemName:'name',//绑定在车系选择上的data-cid上的属性
-  systemId:'id',//绑定在车系文字显示
+  systemName:'name',//绑定在车系文字显示
+  systemId:'id',//绑定在车系选择上的data-cid上的属性
   systemClick:function(val){
     console.log(JSON.stringify(val));//返回的数据
     $.ajax({
