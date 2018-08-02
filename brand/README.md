@@ -25,7 +25,7 @@ Zepto 或者 jQuery 1.7以上版本，推荐jQuery 2.x版本（二者不要同�
 ## 回调
 brandClick,systemClick,success都有一个回调参数
 此参数内容 为下
-
+````
   {
     brandVal:'',//选中的品牌文字
     brandCid:'',//选中的品牌id
@@ -34,6 +34,10 @@ brandClick,systemClick,success都有一个回调参数
     modelVal:'',//选中的车型的文字
     modelCid:''//选中的车型的id
   }
+````
+
+
+
 ````
 
 var brand = $('body').brand({
