@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/*
+* @Author: 明月寒
+* @Date:   2017-02-22 17:15:23
+* @github: http://www.github.com/jxmyh99
+* @email:  email@example.com
+* @blog:  http://www.33u3.com
+* @Last Modified by:   huangxinmin
+* @Last Modified time: 2018-08-02 15:20:42
+*/
+.brand_list, .brand_pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+
+.brand_alert {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  text-align: center;
+  z-index: 1000;
+  font-size: 12px;
+  display: none; }
+  .brand_alert span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 40px;
+    color: white; }
+
+.brand_list {
+  display: none;
+  background-color: #fff; }
+  .brand_list__title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #ededed;
+    padding: 0 10px;
+    color: #666; }
+  .brand_list__wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    height: 100%; }
+  .brand_list__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    padding: 0 20px 0 10px;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+  .brand_list__letter {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .brand_list__group li {
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 45px;
+    height: 45px;
+    border-bottom: 1px solid #ededed; }
+  .brand_list .brand_group__title {
+    font-weight: 700;
+    padding-left: 0;
+    height: 30px;
+    line-height: 30px; }
+  .brand_list__letter li {
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px; }
+
+.brand_pop {
+  display: none; }
+  .brand_pop__bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    top: 0; }
+  .brand_pop__wrap {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 78%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1002; }
+  .brand_pop__main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; }
+  .brand_pop__title {
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid #ededed; }
+    .brand_pop__title span {
+      float: left;
+      line-height: 40px;
+      font-size: 16px;
+      color: #666; }
+  .brand_pop__close {
+    float: right;
+    width: 35px;
+    height: 20px;
+    margin-top: 9px;
+    background: transparent url("../img/close.png") right top no-repeat;
+    background-size: contain; }
+  .brand_pop__list {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    height: calc(100% - 34px);
+    font-size: 12px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+    .brand_pop__list ul {
+      padding-left: 15px; }
+    .brand_pop__list li {
+      height: 45px;
+      font-size: 15px;
+      color: #333;
+      line-height: 45px;
+      border-bottom: 1px solid #ededed;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-right: .1rem; }
+
+.brand_pop__wrap.in {
+  -webkit-animation: sidebar-in 250ms linear both;
+  animation: sidebar-in 250ms linear both; }
+
+.brand_pop__wrap.out {
+  -webkit-animation: sidebar-out 250ms linear both;
+  animation: sidebar-out 250ms linear both; }
+
+@-webkit-keyframes sidebar-in {
+  0% {
+    right: -78%; }
+  100% {
+    right: 0; } }
+
+@keyframes sidebar-in {
+  0% {
+    right: -78%; }
+  100% {
+    right: 0; } }
+
+@-webkit-keyframes sidebar-out {
+  0% {
+    right: 0; }
+  100% {
+    right: -78%; } }
+
+@keyframes sidebar-out {
+  0% {
+    right: 0; }
+  100% {
+    right: -78%; } }
+
+.card_model .brand_pop__bg {
+  background-color: transparent; }
+
+.card_model .brand_pop__list li {
+  padding: 10px;
+  padding-left: 0;
+  height: auto;
+  line-height: 1.3;
+  white-space: normal;
+  text-align: justify; }
