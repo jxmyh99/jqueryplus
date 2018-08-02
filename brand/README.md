@@ -108,9 +108,9 @@ var brand = $('body').brand({
 
 暴露一些功能，可以让brand更灵活的使用
 
-`show` 显示brand
-`hide` 隐藏brand
-`systemShow` 显示brand的车系
-`systemHide` 隐藏brand的车系
-`modelShow` 显示brand的车型
-`modelHide` 隐藏brand的车型
+`show` 显示brand<br />
+`hide` 隐藏brand<br />
+`systemShow` 显示brand的车系<br />
+`systemHide` 隐藏brand的车系<br />
+`modelShow` 显示brand的车型<br />
+`modelHide` 隐藏brand的车型<br />
