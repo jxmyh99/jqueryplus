@@ -81,6 +81,7 @@ var brand = $('body').brand({
   modelName:'name',//绑定在车型文字显示
   modelId:'id',//绑定在车型选择上的data-cid上的属性
   success:function(val){
+    <!-- 最后选择的结果 -->
     console.log(JSON.stringify(val))
   }
 })
