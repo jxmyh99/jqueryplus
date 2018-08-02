@@ -35,7 +35,7 @@
     tools = {};
 
   var $win = $(win),
-    $doc = $(doc);
+    $doc = $('body');
 
   // 封装方式
   $.fn.brand = function(options) {
@@ -1416,7 +1416,7 @@
           .on('touchstart', bindTouchEvents)
           .on('touchmove', bindTouchEvents)
           .on('touchend', bindTouchEvents);
-    
+
 
 
     // 关闭当前
@@ -1568,11 +1568,11 @@
             return;
           }
           if (Math.abs(globalTouch.dy) >= letsilderheight) {
-            
+
             $('.brand_alert').show().children('span').text(dataKey);
             $('.brand_list__main').scrollTop(lContPos[dataKey]);
           }
-          
+
           break;
         case 'touchend':
           setTimeout(function() {
