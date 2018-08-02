@@ -106,7 +106,7 @@ var brand = $('body').brand({
 
 ## API
 
-暴露一些功能，可以让brand更灵活的使用
+暴露一些功能，可以让brand更灵活的使用.
 
 `show` 显示brand<br />
 `hide` 隐藏brand<br />
