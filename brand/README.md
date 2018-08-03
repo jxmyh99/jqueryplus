@@ -13,6 +13,11 @@
 Zepto 或者 jQuery 1.7以上版本，推荐jQuery 2.x版本（二者不要同时引用）
 
 
+## 示例
+
+![扫一扫](examples/code.png)
+[demo打开](http://http://www.33u3.com/jqueryplus/brand/examples/)
+
 ## 使用方法
 
 引用css和js
