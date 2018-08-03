@@ -2,7 +2,7 @@
  * @Author: huangxinmin
  * @Date:   2018-07-23 11:07:49
  * @Last Modified by:   huangxinmin
- * @Last Modified time: 2018-08-02 16:36:24
+ * @Last Modified time: 2018-08-03 12:00:02
  */
 
 ;
@@ -1374,7 +1374,6 @@
       ]
     },
     selectVal:{},
-    html: '<div class="brand_list"> <div class="brand_list__wrap"> <div class="brand_list__title"><span>车辆品牌选择</span> <div class="brand_pop__close"></div> </div> <div class="brand_list__main"> <div class="brand_list__group"> <ul> </ul> </div> </div> <div class="brand_list__letter"> <ol> <li data-key="A" data-index="0">A</li> <li data-key="B" data-index="1">B</li> <li data-key="C" data-index="2">C</li> <li data-key="D" data-index="3">D</li> <li data-key="F" data-index="4">F</li> <li data-key="G" data-index="5">G</li> <li data-key="H" data-index="6">H</li> <li data-key="J" data-index="7">J</li> <li data-key="K" data-index="8">K</li> <li data-key="L" data-index="9">L</li> <li data-key="M" data-index="10">M</li> <li data-key="N" data-index="11">N</li> <li data-key="O" data-index="12">O</li> <li data-key="Q" data-index="13">Q</li> <li data-key="R" data-index="14">R</li> <li data-key="S" data-index="15">S</li> <li data-key="T" data-index="16">T</li> <li data-key="W" data-index="17">W</li> <li data-key="X" data-index="18">X</li> <li data-key="Y" data-index="19">Y</li> <li data-key="Z" data-index="20">Z</li> </ol> </div> </div> </div> <div class="brand_alert"><span></span></div> <div class="brand_pop card_system"> <div ontouchmove="return false;" class="brand_pop__bg"></div> <div class="brand_pop__wrap"> <div class="brand_pop__main"> <div class="brand_pop__title"><span>标题</span> <div class="brand_pop__close"></div> </div> <div class="brand_pop__list"> <ul></ul> </div> </div> </div> </div> <div class="brand_pop card_model"> <div ontouchmove="return false;" class="brand_pop__bg"></div> <div class="brand_pop__wrap"> <div class="brand_pop__main"> <div class="brand_pop__title"><span>标题</span> <div class="brand_pop__close"></div> </div> <div class="brand_pop__list"> <ul></ul> </div> </div> </div> </div>',
     bindTouchEvents: function(e) {
       console.log(e)
     },
@@ -1420,7 +1419,7 @@
 
 
     // 关闭当前
-    $doc.on('click','.brand_pop__bg,.brand_pop .brand_pop__close',function(){
+    $doc.on('touchstart','.brand_pop__bg,.brand_pop .brand_pop__close',function(){
       var bg = $(this).parents('.brand_pop');
       if(bg.data('index') == 2){
           tools.selectVal.systemVal = '';
@@ -1429,7 +1428,6 @@
           tools.selectVal.modelVal = '';
           tools.selectVal.modelCid = '';
       }
-      console.log(tools.selectVal);
       bg.find('.brand_pop__wrap')
           .removeClass('in')
           .addClass('out');
@@ -1520,7 +1518,7 @@
     for(var jsonItem in dataJson){
       html += '<li data-key="'+jsonItem+'" data-index="'+ i++ +'">'+jsonItem+'</li>'
     }
-    html+='</ol></div></div></div><div class="brand_alert"><span></span></div> <div class="brand_pop card_system" data-index="2"> <div ontouchmove="return false;" class="brand_pop__bg"></div> <div class="brand_pop__wrap"> <div class="brand_pop__main"> <div class="brand_pop__title"><span>标题</span> <div class="brand_pop__close"></div> </div> <div class="brand_pop__list"> <ul></ul> </div> </div> </div> </div> <div class="brand_pop card_model" data-index="3"> <div ontouchmove="return false;" class="brand_pop__bg"></div> <div class="brand_pop__wrap"> <div class="brand_pop__main"> <div class="brand_pop__title"><span>标题</span> <div class="brand_pop__close"></div> </div> <div class="brand_pop__list"> <ul></ul> </div> </div> </div> </div>';
+    html+='</ol></div></div></div><div class="brand_alert"><span></span></div> <div class="brand_pop card_system" data-index="2"> <div  class="brand_pop__bg"></div> <div class="brand_pop__wrap"> <div class="brand_pop__main"> <div class="brand_pop__title"><span>标题</span> <div class="brand_pop__close"></div> </div> <div class="brand_pop__list"> <ul></ul> </div> </div> </div> </div> <div class="brand_pop card_model" data-index="3"> <div  class="brand_pop__bg"></div> <div class="brand_pop__wrap"> <div class="brand_pop__main"> <div class="brand_pop__title"><span>标题</span> <div class="brand_pop__close"></div> </div> <div class="brand_pop__list"> <ul></ul> </div> </div> </div> </div>';
     // 写入html
     me.$element.append(html)
   }
