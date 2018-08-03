@@ -15,7 +15,7 @@ Zepto 或者 jQuery 1.7以上版本，推荐jQuery 2.x版本（二者不要同�
 
 ## 示例
 
-![扫一扫](examples/code.png)
+![扫一扫](examples/code.png =100x100)
 [demo打开](http://http://www.33u3.com/jqueryplus/brand/examples/)
 
 ## 使用方法
