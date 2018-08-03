@@ -35,7 +35,7 @@
     tools = {};
 
   var $win = $(win),
-    $doc = $('body');
+    $doc = $(doc);
 
   // 封装方式
   $.fn.brand = function(options) {
@@ -1453,7 +1453,7 @@
 
 
     // 点击品牌单选
-    $(".brand_list .brand_group__item").click(function(){
+    $doc.on('click','.brand_list .brand_group__item',function(){
       tools.selectVal.brandVal = $(this).text();
       tools.selectVal.brandCid = $(this).data('cid');
       if(me.opts.level == 1){
@@ -1599,7 +1599,12 @@
     getOffset();
   }
   prototype.hide = function() {
-    $(tools.brandWrap).hide();
+    $('.brand_pop__wrap')
+          .removeClass('in')
+          .addClass('out');
+    setTimeout(function(){
+        $(".brand_pop,.brand_list").hide();
+      },250)
   }
   // 显示车型
   prototype.systemShow = function(json){

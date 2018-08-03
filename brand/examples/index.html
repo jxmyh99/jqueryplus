@@ -103,16 +103,15 @@
   </div>
 <script>
   $(function(){
-    var brand = $('body').brand({
-      level:1,
-      success:function(val){
-        $("#selectBrand span").text(val.brandVal)
-      }
-    })
+    var brand = $('body').brand()
 
     $('#selectBrand').click(function(){
       brand.opts.level = 1;
       brand.show()
+      brand.opts.success = function(val){
+        console.log(val);
+        $("#selectBrand span").text(val.brandVal)
+      }
     });
 
     $('#selectSystem').click(function(){
@@ -125,7 +124,6 @@
           dataType: 'jsonp'
         })
           .done(function (data) {
-            // console.log(data);
             brand.systemShow(data.Message)
           })
           .fail(function () {
@@ -168,7 +166,14 @@
           dataType: 'jsonp'
         })
           .done(function (data) {
-            brand.modelShow(data.Message);
+            // 此处用于判断后面没有可以选择的车型
+            if(!data.Success){
+              brand.hide();
+              $("#selectModel span").text(val.brandVal + ' ' + val.systemVal)
+            }else{
+              brand.modelShow(data.Message);
+            }
+
           })
           .fail(function () {
             console.log("error");
